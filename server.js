@@ -18,6 +18,24 @@ server.route({
   }
 });
 
+//add second route
+// server.route({
+//   method: 'GET',
+//   path: '/{name}',
+//   handler: function (request, reply) {
+//     reply('Hello, ' + encodeURIComponent(request.params.name) + '!');
+//   }
+// });
+
+//put, post
+server.route({
+  method: ['PUT', 'POST'],
+  path: '/put',
+  handler: function (request, reply) {
+    reply('I did something');
+  }
+});
+
 //Start server
 server.start((err) => {
 
